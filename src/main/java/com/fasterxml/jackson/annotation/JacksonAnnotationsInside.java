@@ -6,6 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
+ * 标记注解
  * Meta-annotation (annotations used on other annotations)
  * used for indicating that instead of using target annotation
  * (annotation annotated with this annotation),

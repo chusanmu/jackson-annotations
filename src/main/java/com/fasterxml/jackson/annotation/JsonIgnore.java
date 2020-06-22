@@ -6,6 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
+ * TODO: 常用注解，用于忽略某些字段 某些方法上，这个注解一般用在要忽略的字段上，序列化 反序列化都有效
  * Marker annotation that indicates that the logical property that
  * the accessor (field, getter/setter method or Creator parameter
  * [of {@link JsonCreator}-annotated constructor or factory method])

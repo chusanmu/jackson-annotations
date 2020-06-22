@@ -6,6 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
+ * TODO: 作用在字段或者方法上面，提供对属性名称重命名，用来对属性的序列化 反序列化
  * Marker annotation that can be used to define a non-static
  * method as a "setter" or "getter" for a logical property
  * (depending on its signature),
@@ -51,6 +52,7 @@ public @interface JsonProperty
     public final static int INDEX_UNKNOWN = -1;
     
     /**
+     * TODO: 一般只会用到这个属性，也就是别名，value值不写 默认取属性名
      * Defines name of the logical property, i.e. JSON object field
      * name to use for the property. If value is empty String (which is the
      * default), will try to use name of the field that is annotated.

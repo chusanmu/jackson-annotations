@@ -6,6 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
+ * TODO:如果值为null就不序列化此字段等规则
  * Annotation used to indicate when value of the annotated property (when
  * used for a field, method or constructor parameter), or all 
  * properties of the annotated class, is to be serialized.
@@ -103,18 +104,21 @@ public @interface JsonInclude
     public enum Include
     {
         /**
+         * 默认策略，任何情况都序列化该字段，和不写这个注解是一样的
          * Value that indicates that property is to be always included,
          * independent of value of the property.
          */
         ALWAYS,
 
         /**
+         * TODO: 这个常用，如果字段为null 就不序列化了
          * Value that indicates that only properties with non-null
          * values are to be included.
          */
         NON_NULL,
 
         /**
+         * TODO: 包含NON_NULL, 同时兼容java8的 Optinal
          * Value that indicates that properties are included unless their value
          * is:
          *<ul>
@@ -130,6 +134,7 @@ public @interface JsonInclude
         NON_ABSENT,
 
         /**
+         * TODO: 同时兼容size=0的情况
          * Value that indicates that only properties with null value,
          * or what is considered empty, are not to be included.
          * Definition of emptiness is data type specific; see below

@@ -6,6 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
+ * TODO: 作用于方法，通常用来标注构造方法或静态工厂方法上
  * Marker annotation that can be used to define constructors and factory
  * methods as one to use for instantiating new instances of the associated
  * class.

@@ -6,6 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
+ * TODO: 按原样序列化属性，该值不转义 或 已引用值的情况下很有用
  * Marker annotation that indicates that the annotated method
  * or field should be serialized by including literal String value
  * of the property as is, without quoting of characters.

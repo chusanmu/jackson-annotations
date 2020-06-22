@@ -6,6 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
+ * TODO: 标注在类上，表示本类不参与序列化
  * Marker annotation that indicates that all properties of annotated
  * type are to be ignored during serialization and deserialization.
  *<p>

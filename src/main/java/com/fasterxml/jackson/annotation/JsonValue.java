@@ -6,6 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
+ * TODO: 他能标注在get方法或者是字段上，一个类只能用一个，当加上@JsonValue注解时，序列化时就返回这一个字段的值，直接返回值，而不是Json了
  * Marker annotation 
  * that indicates that the value of annotated accessor (either field
  * or "getter" method [a method with non-void return type, no args])

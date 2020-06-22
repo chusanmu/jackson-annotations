@@ -8,6 +8,8 @@ import java.lang.annotation.Target;
 import com.fasterxml.jackson.annotation.JacksonAnnotation;
 
 /**
+ * TODO: 作用于属性，方法，方法参数上，用于给字段/属性注入值，在反序列化的时候 将没有的字段设置为我们设置好的默认值，全局控制
+ *    jacksonInject的生效时机，只有在反序列化时，当json串没有此字段key的时候 才会生效
  * Jackson-specific annotation used for indicating that value of
  * annotated property will be "injected", i.e. set based on value
  * configured by <code>ObjectMapper</code> (usually on per-call basis).
@@ -21,6 +23,8 @@ import com.fasterxml.jackson.annotation.JacksonAnnotation;
 public @interface JacksonInject
 {
     /**
+     * TODO: 表示ID含义，若没有输入会去InjectableValues里根据ID去匹配对应的注入值
+     * InjectableValues即可以按照id添加，也可以按照类型添加，id的优先级更高
      * Logical id of the value to inject; if not specified (or specified
      * as empty String), will use id based on declared type of property.
      *

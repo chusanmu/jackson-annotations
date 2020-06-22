@@ -37,27 +37,32 @@ public @interface JsonAutoDetect
      */
     public enum Visibility {
         /**
+         * TODO: 任何级别的字段都可以被自动识别
          * Value that means that all kinds of access modifiers are acceptable,
          * from private to public.
          */
         ANY,
         /**
+         * TODO: 非private修饰的字段可以自动识别
          * Value that means that any other access modifier other than 'private'
          * is considered auto-detectable.
          */
         NON_PRIVATE,
         /**
+         * TODO: 被protected 和 public修饰的字段可以被自动识别
          * Value that means access modifiers 'protected' and 'public' are
          * auto-detectable (and 'private' and "package access" == no modifiers
          * are not)
          */
         PROTECTED_AND_PUBLIC,
         /**
+         * TODO: 只有被public修饰的字段才可以被自动识别
          * Value to indicate that only 'public' access modifier is considered
          * auto-detectable.
          */
         PUBLIC_ONLY,
         /**
+         * TODO: 所有的字段都不自动识别
          * Value that indicates that no access modifiers are auto-detectable:
          * this can be used to explicitly disable auto-detection for specified
          * types.
@@ -65,6 +70,7 @@ public @interface JsonAutoDetect
         NONE,
         
         /**
+         * 同 public_only 默认级别
          * Value that indicates that default visibility level (whatever it is,
          * depends on context) is to be used. This usually means that inherited
          * value (from parent visibility settings) is to be used.

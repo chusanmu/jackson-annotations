@@ -6,6 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
+ * TODO: 它是一个比较新的注解，用于集合 map的合并，使用场景较少，但理解起来很复杂
  * Annotation to specify whether annotated property value should use "merging" approach:
  * merging meaning that the current value is first accessed (with a getter or field) and then modified
  * with incoming data. If merging is not used assignment happens without considering current state.

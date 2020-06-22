@@ -6,6 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
+ * TODO: 序列化的时候是否对属性进行排序，它有两个属性，value[] 自己指定属性顺序，alphabetic:是否按照字母表顺序排序，默认是false表示不排序
  * Annotation that can be used to define ordering (possibly partial) to use
  * when serializing object properties. Properties included in annotation
  * declaration will be serialized first (in defined order), followed by

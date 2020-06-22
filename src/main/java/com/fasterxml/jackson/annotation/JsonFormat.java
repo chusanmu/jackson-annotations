@@ -5,6 +5,8 @@ import java.util.Locale;
 import java.util.TimeZone;
 
 /**
+ * TODO: 最为常用，最为重要的一个注解，功能十分强大
+ *   它可以标注在几乎任何地方，用得最多的是标注在字段上
  * General-purpose annotation used for configuring details of how
  * values of properties are to be serialized.
  * Unlike most other Jackson annotations, annotation does not
@@ -69,6 +71,7 @@ public @interface JsonFormat
     public final static String DEFAULT_TIMEZONE = "##default";
     
     /**
+     * TODO: 指定格式模板，该模板由具体的序列化器去实现
      * Datatype-specific additional piece of configuration that may be used
      * to further refine formatting aspects. This may, for example, determine
      * low-level format String used for {@link java.util.Date} serialization;
@@ -77,6 +80,8 @@ public @interface JsonFormat
     public String pattern() default "";
 
     /**
+     * TODO: 序列化后的类型
+     *
      * Structure to use for serialization: definition of mapping depends on datatype,
      * but usually has straight-forward counterpart in data format (JSON).
      * Note that commonly only a subset of shapes is available; and if 'invalid' value
@@ -148,6 +153,7 @@ public @interface JsonFormat
     public enum Shape
     {
         /**
+         * TODO：不指定特定的类型
          * Marker enum value that indicates "whatever" choice, meaning that annotation
          * does NOT specify shape to use.
          * Note that this is different from {@link Shape#NATURAL}, which
@@ -156,6 +162,7 @@ public @interface JsonFormat
         ANY,
 
         /**
+         * TODO: JSON -> STRING,  JSON NUMBER -> JAVA NUMBERS 等等
          * Marker enum value that indicates the "default" choice for given datatype;
          * for example, JSON String for {@link java.lang.String}, or JSON Number
          * for Java numbers.
@@ -173,16 +180,19 @@ public @interface JsonFormat
         SCALAR,
 
         /**
+         * 数组
          * Value that indicates that (JSON) Array type should be used.
          */
         ARRAY,
         
         /**
+         * 对象
          * Value that indicates that (JSON) Object type should be used.
          */
         OBJECT,
 
         /**
+         * 数字
          * Value that indicates that a numeric (JSON) type should be used
          * (but does not specify whether integer or floating-point representation
          * should be used)

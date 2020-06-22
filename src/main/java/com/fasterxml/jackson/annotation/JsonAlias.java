@@ -6,6 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
+ * TODO: 这个注解只在反序列化时使用，指定该java属性可以接受的更多名称，也就是别名嘛
  * Annotation that can be used to define one or more alternative names for
  * a property, accepted during deserialization as alternative to the official
  * name. Alias information is also exposed during POJO introspection, but has

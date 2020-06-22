@@ -6,6 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
+ * TODO: JSON数据解包，打平了，然后还可以指定前缀后缀
  * Annotation used to indicate that a property should be serialized
  * "unwrapped"; that is, if it would be serialized as JSON Object, its
  * properties are instead included as properties of its containing

@@ -7,6 +7,8 @@ import java.lang.annotation.Target;
 import java.util.*;
 
 /**
+ * todo: 作用在类上，用来标注想要忽略的字段
+ *          相比较于@JsonIgnore还有更方便的一点，比如一个类是代理类，我们无法直接将@JsonIgnore标记在属性或者方法上面，此时便可以采用此注解标在方法声明上
  * Annotation that can be used to either suppress serialization of
  * properties (during serialization), or ignore processing of
  * JSON properties read (during deserialization).
@@ -25,6 +27,7 @@ import java.util.*;
  * ignorals: that is, you can only add properties to ignore, not remove
  * or override. So you can not remove properties to ignore using
  * per-property annotation.
+ * @author
  */
 @Target({ElementType.ANNOTATION_TYPE, ElementType.TYPE,
     ElementType.METHOD, ElementType.CONSTRUCTOR, ElementType.FIELD})
@@ -33,6 +36,7 @@ import java.util.*;
 public @interface JsonIgnoreProperties
 {
     /**
+     * TODO: 需要忽略的属性名称，序列化 反序列化时都有效
      * Names of properties to ignore.
      */
     public String[] value() default { };

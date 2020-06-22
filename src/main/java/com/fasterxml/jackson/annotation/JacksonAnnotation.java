@@ -6,6 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
+ * 标记注解，所有的标注注解都被此注解所标记
  * Meta-annotation (annotations used on other annotations)
  * used for marking all annotations that are
  * part of Jackson package. Can be used for recognizing all

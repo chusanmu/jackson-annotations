@@ -6,6 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
+ * TODO: 反序列化时 收集不认识的key们
  * Marker annotation that can be used to define a logical "any setter" mutator --
  * either using non-static
  * two-argument method (first argument name of property, second value

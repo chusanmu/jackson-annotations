@@ -6,6 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
+ * TODO: 序列化时 输出不认识的key们
  * Marker annotation that can be used to define a non-static,
  * no-argument method to be an "any getter"; accessor for getting
  * a set of key/value pairs, to be serialized as part of containing POJO
